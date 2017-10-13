@@ -19,6 +19,7 @@
 
     <script src="js/riqespecies_avesacures-cr_ramsar-2017-wgs84.js" type="text/javascript"></script>
     <script src="js/regPresGBIFAvesAcuRes-cr_ramsar-2017-wgs84-parcial.js"  type="text/javascript"></script>
+    <script src="js/rios1200mil_JSON.js" type="text/javascript"></script>
 
     <script>
       var map = L.map('map').setView([9.7, -84], 8);
@@ -37,7 +38,15 @@
           };
         }
       }).addTo(map);
-	    
+      L.geoJson(rios, {
+        style: function (feature) {
+	  return {
+            fillColor: '#009900', 
+            color: '#3399ff',
+	   
+          };
+        }
+      }).addTo(map);    
 	    
       function onEachFeature(feature, layer) {
 	var popupContent = "";

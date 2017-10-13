@@ -49,6 +49,13 @@
         if (feature.properties && feature.properties.verbatimLo) {
 	  popupContent += "<br>" + feature.properties.verbatimLo;
 	    }
+	if (feature.properties && feature.properties.decimalLat) {
+	  popupContent += "<br>" + "Lat" + feature.properties.decimalLat;
+	    }   
+	if (feature.properties && feature.properties.decimalLon) {
+	  popupContent += "<br>" + "lon" + feature.properties.decimalLon;
+	    }   
+	      
 	layer.bindPopup(popupContent);
       }	    
 	    

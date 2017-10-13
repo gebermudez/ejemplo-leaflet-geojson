@@ -45,6 +45,9 @@
 	if (feature.properties && feature.properties.scientif_1) {
 	  popupContent += feature.properties.scientif_1;
 	}
+	if (feature.properties && feature.properties.verbatimLo) {
+	  popupContent += '\n' + feature.properties.verbatimLo;
+	}
      
 	layer.bindPopup(popupContent);
       }	    
